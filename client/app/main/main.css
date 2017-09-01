@@ -1,0 +1,42 @@
+.thing-form {
+  margin: 20px 0;
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-unit {
+  position: auto;
+  padding: 30px 15px;
+  text-align: left;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: transparent;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+body{
+  background-color: white;
+}
+#sty2{
+  color:black;
+}
+#sty3{
+  color:#e81000;
+}
+#sty4{
+  color:crimson;
+}
+#movie{
+  color:#0095d8;
+}

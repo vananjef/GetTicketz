@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="panel-group" id="mypanel">
+        <form name="myForm">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <a class="panel-title collapsed" data-toggle="collapse" href="#paymentdetails"><span class="glyphicon glyphicon-chevron-down"></span> Payment Details</a>
+            </div>
+            <div id="paymentdetails" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <h4 class="text-info">Enter Your Card Details</h4>
+                <div class="well">
+                  <p>Card Number</p>
+                  <p><input type="text" name="myInput" ng-model="myInput" ng-required="myVar" placeholder="ENTER YOUR CARD NUMBER" size="30">
+                  <b ng-if="!myForm.myInput.$valid">The input field cannot be empty</b>
+                  </p>
+                  <p> Name on the Card </p>
+                  <p><input type="text" name="myInput1" ng-model="myInput1" ng-required="myVar" placeholder="NAME ON THE CARD" size="30">
+                  <b ng-if="!myForm.myInput1.$valid">The input field cannot be empty</b>
+                  </p>
+                  <p>Expiry Date</p>
+                  <p><input type="text" name="myInput2" ng-model="myInput2" ng-required="myVar"  placeholder="M M" size="2">
+
+                     <input type="text" name="myInput3" ng-model="myInput3" ng-required="myVar" ng-required="myVar" placeholder="Y Y" size="2">
+                   <b ng-if="!myForm.myInput3.$valid">The input field cannot be empty</b></p>
+                  <p style="letter-spacing:1px">CVV</p>
+                  <p><input type="text" name="myInput4" ng-model="myInput4" ng-required="myVar" placeholder="C V V" size="4">
+                  <b ng-if="!myForm.myInput4.$valid">The input field cannot be empty</b></p>
+                  <p><input type="checkbox"  ng-model="myVar" ng-init="myVar=true">By clicking on "MAKE PAYMENT" you agree to the <a href="#">terms and conditions</a></p>
+                  <p><button ng-click="paymentCtrl.pay()"  class="btn btn-danger" role="button">BOOK</button></p>
+                  <!-- <p><a href="/confirmation" type="submit" id="MakePaymentButton" ng-click="$paymentCtrl.pay()" class="btn btn-danger"><span style="margin:0px 30px 0px 30px">MAKE PAYMENT</span></a></p> -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="well">
+        <h4 style="letter-spacing:5px">ORDER SUMMARY</h4><br/>
+        <h4 id="Movieheading">{{paymentCtrl.movieName}}</h4>
+        <p><span id="Cinema">{{paymentCtrl.theatreName}}</span></p>
+        <!-- <p><span id="Seatclass"></span> - <span id="Seatno"></span></p> -->
+        <p>No. of Tickets - <span id="Ticketcount">{{paymentCtrl.noOfSeats}}</span> Tickets</p>
+        <h4 id="Moviedate">{{paymentCtrl.date}}</h4>
+        <h5 id="ShowTime">{{paymentCtrl.time}}</h5>
+        <hr size="5px"/>
+        <table width="100%" height="100px">
+          <tr>
+            <td>Amount Payable</td>
+            <th style="text-align:right; font-size:20px"><span id="Amount">{{paymentCtrl.grandTotal}}</span></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8" style="color:grey; font-size:12px">
+      <div>Note:</div>
+      <ol>
+        <li>resgistrations/Tickets once booked cannot be exchanged, cancelled or refunded.</li>
+        <li>In case of Credit/Debit Card booking, the Card holder must be present at the ticket counter while collecting the ticket(s).</li>
+      </ol>
+    </div>
+
+  </div>
+</div>

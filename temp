@@ -1,0 +1,286 @@
+<div id="seat">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><bold><center>Gold</center></bold></h2>
+        <div class="col-md-6" class="form-control">
+          <table class="table">
+            <tr>
+              <td><bold>A</bold></td>
+              <td><div class="seatbook" id="A1">A1</div></td>
+              <td><div class="seatbook">A2</div></td>
+              <td><div class="seatbook">A3</div></td>
+              <td><div class="seatbook">A4</div></td>
+              <td><div class="seatbook">A5</div></td>
+              <td><div class="seatbook">A6</div></td>
+              <td><div class="seatbook">A7</div></td>
+              <td><div class="seatbook">A8</div></td>
+              <td><div class="seatbook">A9</div></td>
+              <td><div class="seatbook">A10</div></td>
+            </tr>
+            <tr>
+              <td><bold>B</bold></td>
+              <td><div class="seatbook" id="">B1</div></td>
+              <td><div class="seatbook">B2</div></td>
+              <td><div class="seatbook">B3</div></td>
+              <td><div class="seatbook">B4</div></td>
+              <td><div class="seatbook">B5</div></td>
+              <td><div class="seatbook">B6</div></td>
+              <td><div class="seatbook">B7</div></td>
+              <td><div class="seatbook">B8</div></td>
+              <td><div class="seatbook">B9</div></td>
+              <td><div class="seatbook">B10</div></td>
+            </tr>
+            <tr>
+              <td><bold>C</bold></td>
+              <td><div class="seatbook" id="C1">C1</div></td>
+              <td><div class="seatbook">C2</div></td>
+              <td><div class="seatbook">C3</div></td>
+              <td><div class="seatbook">C4</div></td>
+              <td><div class="seatbook">C5</div></td>
+              <td><div class="seatbook">C6</div></td>
+              <td><div class="seatbook">C7</div></td>
+              <td><div class="seatbook">C8</div></td>
+              <td><div class="seatbook">C9</div></td>
+              <td><div class="seatbook">C10</div></td>
+            </tr>
+            <tr>
+              <td><bold>D</bold></td>
+              <td><div class="seatbook" id="D1">D1</div></td>
+              <td><div class="seatbook">D2</div></td>
+              <td><div class="seatbook">D3</div></td>
+              <td><div class="seatbook">D4</div></td>
+              <td><div class="seatbook">D5</div></td>
+              <td><div class="seatbook">D6</div></td>
+              <td><div class="seatbook">D7</div></td>
+              <td><div class="seatbook">D8</div></td>
+              <td><div class="seatbook">D9</div></td>
+              <td><div class="seatbook">D10</div></td>
+            </tr>
+            <tr>
+              <td><bold>E</bold></td>
+              <td><div class="seatbook" id="E1">E1</div></td>
+              <td><div class="seatbook">E2</div></td>
+              <td><div class="seatbook">E3</div></td>
+              <td><div class="seatbook">E4</div></td>
+              <td><div class="seatbook">E5</div></td>
+              <td><div class="seatbook">E6</div></td>
+              <td><div class="seatbook">E7</div></td>
+              <td><div class="seatbook">E8</div></td>
+              <td><div class="seatbook">E9</div></td>
+              <td><div class="seatbook">E10</div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-6" class="form-control">
+          <table class="table">
+            <tr>
+              <td><bold>A</bold></td>
+              <td><div class="seatbook">A11</div></td>
+              <td><div class="seatbook">A12</div></td>
+              <td><div class="seatbook">A13</div></td>
+              <td><div class="seatbook">A14</div></td>
+              <td><div class="seatbook">A15</div></td>
+              <td><div class="seatbook">A16</div></td>
+              <td><div class="seatbook">A17</div></td>
+              <td><div class="seatbook">A18</div></td>
+              <td><div class="seatbook">A19</div></td>
+              <td><div class="seatbook">20</div></td>
+            </tr>
+            <tr>
+              <td><bold>B</bold></td>
+              <td><div class="seatbook">B11</div></td>
+              <td><div class="seatbook">B12</div></td>
+              <td><div class="seatbook">B13</div></td>
+              <td><div class="seatbook">B14</div></td>
+              <td><div class="seatbook">B15</div></td>
+              <td><div class="seatbook">B16</div></td>
+              <td><div class="seatbook">B17</div></td>
+              <td><div class="seatbook">B18</div></td>
+              <td><div class="seatbook">B19</div></td>
+              <td><div class="seatbook">B20</div></td>
+            </tr>
+            <tr>
+              <td><bold>C</bold></td>
+              <td><div class="seatbook">C11</div></td>
+              <td><div class="seatbook">C12</div></td>
+              <td><div class="seatbook">C13</div></td>
+              <td><div class="seatbook">C14</div></td>
+              <td><div class="seatbook">C15</div></td>
+              <td><div class="seatbook">C16</div></td>
+              <td><div class="seatbook">C17</div></td>
+              <td><div class="seatbook">C18</div></td>
+              <td><div class="seatbook">C19</div></td>
+              <td><div class="seatbook">C20</div></td>
+            </tr>
+            <tr>
+              <td><bold>D</bold></td>
+              <td><div class="seatbook">D11</div></td>
+              <td><div class="seatbook">D12</div></td>
+              <td><div class="seatbook">D13</div></td>
+              <td><div class="seatbook">D14</div></td>
+              <td><div class="seatbook">D15</div></td>
+              <td><div class="seatbook">D16</div></td>
+              <td><div class="seatbook">D17</div></td>
+              <td><div class="seatbook">D18</div></td>
+              <td><div class="seatbook">D19</div></td>
+              <td><div class="seatbook">D20</div></td>
+            </tr>
+            <tr>
+              <td><bold>E</bold></td>
+              <td><div class="seatbook">E11</div></td>
+              <td><div class="seatbook">E12</div></td>
+              <td><div class="seatbook">E13</div></td>
+              <td><div class="seatbook">E14</div></td>
+              <td><div class="seatbook">E15</div></td>
+              <td><div class="seatbook">E16</div></td>
+              <td><div class="seatbook">E17</div></td>
+              <td><div class="seatbook">E18</div></td>
+              <td><div class="seatbook">E19</div></td>
+              <td><div class="seatbook">E20</div></td>
+            </tr>
+          </table>
+        </div>
+        <h2><bold><center>Platinum</center></bold></h2>
+        <div class="col-md-6" class="form-control">
+          <table class="table">
+            <tr>
+              <td><bold>A</bold></td>
+              <td><div class="seatbook" id="A1">A1</div></td>
+              <td><div class="seatbook">A2</div></td>
+              <td><div class="seatbook">A3</div></td>
+              <td><div class="seatbook">A4</div></td>
+              <td><div class="seatbook">A5</div></td>
+              <td><div class="seatbook">A6</div></td>
+              <td><div class="seatbook">A7</div></td>
+              <td><div class="seatbook">A8</div></td>
+              <td><div class="seatbook">A9</div></td>
+              <td><div class="seatbook">A10</div></td>
+            </tr>
+            <tr>
+              <td><bold>B</bold></td>
+              <td><div class="seatbook" id="">B1</div></td>
+              <td><div class="seatbook">B2</div></td>
+              <td><div class="seatbook">B3</div></td>
+              <td><div class="seatbook">B4</div></td>
+              <td><div class="seatbook">B5</div></td>
+              <td><div class="seatbook">B6</div></td>
+              <td><div class="seatbook">B7</div></td>
+              <td><div class="seatbook">B8</div></td>
+              <td><div class="seatbook">B9</div></td>
+              <td><div class="seatbook">B10</div></td>
+            </tr>
+            <tr>
+              <td><bold>C</bold></td>
+              <td><div class="seatbook" id="C1">C1</div></td>
+              <td><div class="seatbook">C2</div></td>
+              <td><div class="seatbook">C3</div></td>
+              <td><div class="seatbook">C4</div></td>
+              <td><div class="seatbook">C5</div></td>
+              <td><div class="seatbook">C6</div></td>
+              <td><div class="seatbook">C7</div></td>
+              <td><div class="seatbook">C8</div></td>
+              <td><div class="seatbook">C9</div></td>
+              <td><div class="seatbook">C10</div></td>
+            </tr>
+            <tr>
+              <td><bold>D</bold></td>
+              <td><div class="seatbook" id="D1">D1</div></td>
+              <td><div class="seatbook">D2</div></td>
+              <td><div class="seatbook">D3</div></td>
+              <td><div class="seatbook">D4</div></td>
+              <td><div class="seatbook">D5</div></td>
+              <td><div class="seatbook">D6</div></td>
+              <td><div class="seatbook">D7</div></td>
+              <td><div class="seatbook">D8</div></td>
+              <td><div class="seatbook">D9</div></td>
+              <td><div class="seatbook">D10</div></td>
+            </tr>
+            <tr>
+              <td><bold>E</bold></td>
+              <td><div class="seatbook" id="E1">E1</div></td>
+              <td><div class="seatbook">E2</div></td>
+              <td><div class="seatbook">E3</div></td>
+              <td><div class="seatbook">E4</div></td>
+              <td><div class="seatbook">E5</div></td>
+              <td><div class="seatbook">E6</div></td>
+              <td><div class="seatbook">E7</div></td>
+              <td><div class="seatbook">E8</div></td>
+              <td><div class="seatbook">E9</div></td>
+              <td><div class="seatbook">E10</div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-6" class="form-control">
+          <table class="table">
+            <tr>
+              <td><bold>A</bold></td>
+              <td><div class="seatbook">A11</div></td>
+              <td><div class="seatbook">A12</div></td>
+              <td><div class="seatbook">A13</div></td>
+              <td><div class="seatbook">A14</div></td>
+              <td><div class="seatbook">A15</div></td>
+              <td><div class="seatbook">A16</div></td>
+              <td><div class="seatbook">A17</div></td>
+              <td><div class="seatbook">A18</div></td>
+              <td><div class="seatbook">A19</div></td>
+              <td><div class="seatbook">20</div></td>
+            </tr>
+            <tr>
+              <td><bold>B</bold></td>
+              <td><div class="seatbook">B11</div></td>
+              <td><div class="seatbook">B12</div></td>
+              <td><div class="seatbook">B13</div></td>
+              <td><div class="seatbook">B14</div></td>
+              <td><div class="seatbook">B15</div></td>
+              <td><div class="seatbook">B16</div></td>
+              <td><div class="seatbook">B17</div></td>
+              <td><div class="seatbook">B18</div></td>
+              <td><div class="seatbook">B19</div></td>
+              <td><div class="seatbook">B20</div></td>
+            </tr>
+            <tr>
+              <td><bold>C</bold></td>
+              <td><div class="seatbook">C11</div></td>
+              <td><div class="seatbook">C12</div></td>
+              <td><div class="seatbook">C13</div></td>
+              <td><div class="seatbook">C14</div></td>
+              <td><div class="seatbook">C15</div></td>
+              <td><div class="seatbook">C16</div></td>
+              <td><div class="seatbook">C17</div></td>
+              <td><div class="seatbook">C18</div></td>
+              <td><div class="seatbook">C19</div></td>
+              <td><div class="seatbook">C20</div></td>
+            </tr>
+            <tr>
+              <td><bold>D</bold></td>
+              <td><div class="seatbook">D11</div></td>
+              <td><div class="seatbook">D12</div></td>
+              <td><div class="seatbook">D13</div></td>
+              <td><div class="seatbook">D14</div></td>
+              <td><div class="seatbook">D15</div></td>
+              <td><div class="seatbook">D16</div></td>
+              <td><div class="seatbook">D17</div></td>
+              <td><div class="seatbook">D18</div></td>
+              <td><div class="seatbook">D19</div></td>
+              <td><div class="seatbook">D20</div></td>
+            </tr>
+            <tr>
+              <td><bold>E</bold></td>
+              <td><div class="seatbook">E11</div></td>
+              <td><div class="seatbook">E12</div></td>
+              <td><div class="seatbook">E13</div></td>
+              <td><div class="seatbook">E14</div></td>
+              <td><div class="seatbook">E15</div></td>
+              <td><div class="seatbook">E16</div></td>
+              <td><div class="seatbook">E17</div></td>
+              <td><div class="seatbook">E18</div></td>
+              <td><div class="seatbook">E19</div></td>
+              <td><div class="seatbook">E20</div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

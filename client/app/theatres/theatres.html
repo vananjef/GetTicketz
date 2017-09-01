@@ -1,0 +1,146 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-3">
+        <div class="form-group">
+          <ul class="nav nav-tabs.nav-stacked">
+            <li class="active" ><a data-toggle="tab" href="#menu2"><span class="glyphicon glyphicon-transfer" ></span><br>Movie Mapping</a></li>
+            <li><a data-toggle="tab" href="#menu3" ng-click="theatresCtrl.fetchMappings()" ><span class="glyphicon glyphicon-trash"></span><br>Delete Mapping</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- col-3 -->
+      <div class="col-md-9">
+        <div class="row">
+          <div class="tab-content">
+            <div id="menu2" class="tab-pane fade in active">
+              <div class="form-group">
+                <h3><bold>Movies Name:<bold></h3>
+                  <select name="movie" class="form-control" ng-model="theatresCtrl.selectedMovie">
+                    <option value=''>--Select Movie--</option>
+                    <option valve="{{m.Name}}" ng-repeat="m in theatresCtrl.movies">{{m.Name}}</option>
+                  </select>
+                </div>
+                <!--end of form  -->
+                <div class="form-group">
+                  <h3><bold>City Name:<bold></h3>
+                    <select name="city" class="form-control" ng-model="theatresCtrl.selectedCity">
+                      <option value=''>--Select City--</option>
+                      <option ng-repeat="t in theatresCtrl.cityNames track by $index">{{t}}</option>
+                    </select>
+                  </div>
+                  <!-- form -->
+                  <div class="form-group">
+                    <h3><bold>Place Name:<bold></h3>
+                      <select name="place" class="form-control" ng-model="theatresCtrl.selectedPlace">
+                        <option value=''>--Select Place--</option>
+                        <option value="{{t.PlaceName}}" ng-repeat="t in theatresCtrl.theatres">{{t.PlaceName}}</option>
+                      </select>
+                    </div>
+                    <!-- form -->
+
+                    <div class="form-group">
+                      <h4><bold>Theatre Name:</bold></h4>
+                      <select name="theatre" class="form-control" ng-model="theatresCtrl.selectedTheatre">
+                        <option value=''>--Select Theatres--</option>
+                        <<option value="{{t.TheatreName}}" ng-repeat="t in theatresCtrl.theatres">{{t.TheatreName}}</option>
+                      </select>
+                    </div>
+                    <!--form  -->
+                    <div class="form-group">
+                      <h4>Date Input</h4>
+                      <input type="date" class="form-control" ng-model="theatresCtrl.date"></input>
+                      <button class="btn btn-success" ng-click="theatresCtrl.addDate()">Add Date</button>
+                      <button class="btn btn-danger" ng-repeat="d in theatresCtrl.dates">{{d}}<span ng-click="theatresCtrl.removeDate(d)" class="glyphicon glyphicon-remove"></span></button>
+                    </div>
+                    <!--form  -->
+                    <div class="form-group">
+                      <h4>Timing</h4>
+                      <input type="time" class="form-control" ng-model="theatresCtrl.time"></input>
+                      <button class="btn btn-success" ng-click="theatresCtrl.addTime()">Add Time</button>
+                      <button class="btn btn-danger" ng-repeat="time in theatresCtrl.times">{{time}}<span ng-click="theatresCtrl.removeTime(time)" class="glyphicon glyphicon-remove"></span></button>
+                    </div>
+                    <!-- form -->
+                    <div>
+                      <button class="btn btn-primary" ng-click="theatresCtrl.saveMapping()">Save Mapping</button>
+                    </div>
+                  </div>
+                  <!--id 2  -->
+                  <div id="menu3" class="tab-pane fade">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-9">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Theatre Name</th>
+                                <th>Location</th>
+                                <th>City</th>
+                                <th>Movie Name</th>
+                                <th>Movie Date</th>
+                                <th>Movie Timings</th>
+                              </tr>
+                              <tr ng-repeat="m in theatresCtrl.movieTheatreMapping">
+                                <td>{{m.TheatreName}}</td>
+                                <td>{{m.PlaceName}}</td>
+                                <td>{{m.City}}</td>
+                                <td>{{m.MovieName}}</td>
+                                <td><a href="" ng-repeat="date in m.Dates track by $index">{{date}}</a></td>
+                                <td>{{m.Times}}</td>
+                                <td><button ng-click="theatresCtrl.removeMapping(m)" class="btn btn-danger glyphicon glyphicon-trash" ></button></td>
+                                <td>
+
+                                    <button type="button" class="btn btn-primary glyphicon glyphicon-edit" ng-click="theatresCtrl.getId(m)" data-toggle="modal" data-target="#myModal"></button></td></tr>
+                                  </thead>
+                                </table>
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Edit Date and Time</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <p>Edit Date:</p>
+                                            <select name="date" class="form-control" ng-model="theatresCtrl.selectedEditDate">
+                                              <option value=''>--Select Date--</option>
+                                              <option valve="{{d.Dates}}" ng-repeat="d in theatresCtrl.movieTheatreMapping">{{d.Dates}}</option>
+                                            </select>
+                                            <p>Edit Time:</p>
+                                            <select name="time" class="form-control" ng-model="theatresCtrl.selectedEditTime">
+                                              <option value=''>--Select Time--</option>
+                                              <option valve="{{t.Times}}" ng-repeat="t in theatresCtrl.movieTheatreMapping">{{t.Times}}</option>
+                                            </select>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" ng-click="theatresCtrl.saveEdit()" data-dismiss="modal">Save Edit</button>
+                                          </div>
+                                          <!--modal footer  -->
+                                        </div>
+                                        <!--modal contant  -->
+                                      </div>
+                                      <!--modal dialog  -->
+                                    </div>
+                                    <!-- modal -->
+                                  </div>
+                                  <!-- container -->
+                        </div>
+                        <!-- col 9 -->
+                      </div>
+                      <!--row  -->
+                    </div>
+                    <!-- form -->
+                  </div>
+                  <!-- id 3 -->
+                </div>
+                <!-- tab content -->
+              </div>
+              <!--row  -->
+            </div>
+            <!--col 9  -->
+          </div>
+          <!--col-2  -->
+        </div>
+        <!--row  -->
+      </div>
+      <!-- container -->

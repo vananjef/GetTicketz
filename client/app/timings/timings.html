@@ -1,0 +1,38 @@
+<!-- <div class="container" id="id2">
+  <br>
+  <br>
+  <h1 style="text-align:center;font-size:50px"  ng-repeat="theatre in timingsCtrl.theatres">{{theatre.MovieName}}</h1>
+  <br>
+  <div > </div>
+</div>
+
+<div class="row" class="col-md-12">
+  <div class="col-md-2">
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  </div>
+<div class="col-md-10">
+  <ul>
+      <li><button class="btn btn-danger"  ng-repeat="date in timingsCtrl.dates"  ng-click="timingsCtrl.getTheatres(date)"><span class="glyphicon glyphicon-calendar"></span>&nbsp &nbsp{{date}}</button></li>
+       <li><h3 ng-repeat="theatre in timingsCtrl.theatres" >{{theatre.TheatreName}}&nbsp &nbsp{{theatre.City}}&nbsp &nbsp{{theatre.PlaceName}}<button class="btn btn-default" ng-repeat="time in theatre.Times" ng-click="timingsCtrl.select(time, theatre.TheatreName)">{{time}}</h3></button></li>
+    </ul>
+  </div>
+</div> -->
+
+<div class="page-header" ng-style="{ 'background-image': 'url({{timingsCtrl.bookingService.backdrop}})' }">
+  <h1 class="align-center">{{ timingsCtrl.bookingService.movieDetails.name }}</h1>
+</div>
+
+<ul class="nav nav-pills">
+  <li ng-repeat="date in timingsCtrl.dates" ><a data-toggle="pill" ng-click="timingsCtrl.selectDate(date)"><span class="glyphicon glyphicon-calendar"></span> {{ date }}</a></li>
+</ul>
+
+<div>
+  <div>
+    <table class="table table-striped">
+      <tr ng-repeat="mapping in timingsCtrl.filteredMappings">
+        <td>{{mapping.theatre}}</td>
+        <td ng-repeat="timing in mapping.Times"><button class="btn btn-default" ng-click="timingsCtrl.selectTimings(mapping.TheatreName, timing)"><span class="glyphicon glyphicon-time"></span> {{timing}}</button></td>
+      </tr>
+    </table>
+  </div>
+</div>

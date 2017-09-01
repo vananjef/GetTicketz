@@ -1,0 +1,92 @@
+<div id="seat" class="container">
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <div>
+        <h5  id="let2"><bold>PLATINUM</bold></h5>
+        <table class="table">
+          <tr ng-repeat="r in seatbookingCtrl.rows | limitTo:5:0">
+            <div>
+              <td><bold>{{r}}</bold></td>
+              <td ng-repeat="c in seatbookingCtrl.columns | limitTo:10:0"><div class="seatbook"ng-class="{'selected': seatbookingCtrl.isSelected(r, c), 'booked': seatbookingCtrl.isBooked(r, c)}"  ng-click="seatbookingCtrl.selectSeat(r, c, 'platinum')">{{r+c}}</div></td>
+            </div>
+            <div>
+              <td><bold>{{r}}</bold></td>
+              <td ng-repeat="c in seatbookingCtrl.columns | limitTo:20:10"><div class="seatbook" ng-class="{'selected': seatbookingCtrl.isSelected(r, c), 'booked': seatbookingCtrl.isBooked(r, c)}" ng-click="seatbookingCtrl.selectSeat(r, c, 'platinum')">{{r+c}}</div></td>
+            </div>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <h5  id="let"><bold>GOLD</bold></h5>
+        <table class="table">
+          <tr ng-repeat="r in seatbookingCtrl.rows | limitTo:10:5">
+            <div id="goldseats">
+              <td><bold>{{r}}</bold></td>
+              <td ng-repeat="c in seatbookingCtrl.columns | limitTo:10:0"><div class="seatbook" ng-class="{'selected': seatbookingCtrl.isSelected(r, c), 'booked': seatbookingCtrl.isBooked(r, c)}" ng-click="seatbookingCtrl.selectSeat(r, c, 'gold')" id="{{r+c}}">{{r+c}}</div></td>
+            </div>
+            <div>
+              <td><bold>{{r}}</bold></td>
+              <td ng-repeat="c in seatbookingCtrl.columns | limitTo:20:10"><div class="seatbook" ng-class="{'selected': seatbookingCtrl.isSelected(r, c), 'booked': seatbookingCtrl.isBooked(r, c)}" ng-click="seatbookingCtrl.selectSeat(r, c, 'gold')" id="{{r+c}}">{{r+c}}</div></td>
+            </div>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+    <br>
+    <br>
+    <br>
+    <div class="col-md-3 bg-info" id="summ">
+      <h2>Booking Summary</h2>
+      <h3>{{seatbookingCtrl.movieDetails.name}}</h3>
+      <div class="">
+        <h3>Platinum</h3>
+        <span>
+          <a class="no-decoration">Seats: </a>
+          <a class="no-decoration" ng-repeat="seat in seatbookingCtrl.bookingForm.platinum track by $index">{{seat.row}}{{seat.col}}{{ $index < seatbookingCtrl.bookingForm.platinum.length - 1 ? ', ' : '' }}</a>
+        </span>
+        <br>
+        <span>
+          <a class="no-decoration"> {{"Seat Count: " + seatbookingCtrl.bookingForm.platinum.length + " Seat(s)"}}</a>
+        </span>
+        <br>
+        <span>
+          <a class="no-decoration">{{"Total Price(200/ticket): Rs " + (0 || seatbookingCtrl.bookingForm.platinum.length * 200)}}</a>
+        </span>
+        <br>
+        <h3 >Gold</h3>
+        <span>
+          <a class="no-decoration">Seats: </a>
+          <a class="no-decoration" ng-repeat="seat in seatbookingCtrl.bookingForm.gold track by $index">{{seat.row}}{{seat.col}}{{ $index < seatbookingCtrl.bookingForm.gold.length - 1 ? ', ' : '' }}</a>
+        </span>
+        <br>
+        <span>
+          <a class="no-decoration"> {{"Seat Count:" + seatbookingCtrl.bookingForm.gold.length + " Seat(s)"}}</a>
+        </span>
+        <br>
+        <span>
+          <a class="no-decoration">{{"Total Price(100/ticket): Rs " + (0 || seatbookingCtrl.bookingForm.gold.length * 100) }}</a>
+        </span>
+        <br>
+        <h3>Total</h3>
+        <span>
+          <a class="no-decoration">{{ "Total seat Price: Rs" + ((seatbookingCtrl.bookingForm.platinum.length * 200) + (seatbookingCtrl.bookingForm.gold.length * 100)) }}</a>
+        </span>
+        <br>
+        <span>
+          <a class="no-decoration">GST: Rs 30</a>
+        </span>
+        <br>
+        <span>
+          <a class="no-decoration">{{"Grand Total: Rs " + seatbookingCtrl.bookingForm.grandTotal }}</a>
+        </span>
+        <br>
+
+      </div>
+      <button type="button" name="button" class="btn btn-success" ng-click="seatbookingCtrl.bookSeats()">Book tickets</button><br><br>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="container">
+  <header class="hero-unit" id="banner">
+    <p style="text-align:center;font-size:70px;font-family:freedom"><span id="sty2">Vanan</span> <span id="sty3"> Cinemas</span><span class="glyphicon glyphicon-grain" id="sty4"></span></p>
+  </header>
+  <div class="row">
+    <div class="carousel slide" id="myCarousel">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+        <li data-slide-to="1" data-target="#myCarousel"></li>
+        <li data-slide-to="2" data-target="#myCarousel"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active" id="slide1">
+          <img src="assets/images/4.jpg" style="height:470px;width:100%" >
+          <div class="carousel-caption">
+
+          </div><!-- end carousel-caption-->
+        </div><!-- end item -->
+
+        <div class="item" id="slide2">
+          <img src="assets/images/2.jpg" style="height:470px;width:100%" >
+          <div class="carousel-caption">
+
+          </div><!-- end carousel-caption-->
+        </div><!-- end item -->
+
+        <div class="item" id="slide3">
+          <img src="assets/images/3.jpg" style="height:470px;width:100%" >
+          <div class="carousel-caption">
+
+          </div><!-- end carousel-caption-->
+        </div><!-- end item -->
+      </div><!-- carousel-inner -->
+
+      <!-- Controls -->
+      <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+      <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+
+    </div><!-- end myCarousel -->
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <p style="text-align:center;font-size:35px;color:#f44336;font-family:Lucida Calligraphy;">NOW SHOWING</p>
+      <br>
+      <br>
+      <div class="col-sm-6 col-md-4" ng-repeat="movie in mainCtrl.movies">
+        <div class="thumbnail" >
+          <img src="{{movie.Poster}}" alt="poster" style="height:380px;">
+          <div class="caption">
+            <h2 id="movie">{{movie.Name}}</h2>
+            <p>{{movie.Genre}}</p>
+            <p>{{movie.Year}}</p>
+            <p>{{movie.Runtime}}</p>
+            <p><a ng-click="mainCtrl.select(movie.Name)" class="btn btn-danger" role="button">BOOK</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end of row  -->
+  </div>
+  <!--end of container  -->
